@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#003fed</color>
+    <color name="primaryLightColor">#696bff</color>
+    <color name="primaryLightestColor">#798BF2</color>
+    <color name="primaryDarkColor">#0017b9</color>
+    <color name="secondaryColor">#edac00</color>
+    <color name="secondaryLightColor">#ffdd4a</color>
+    <color name="secondaryDarkColor">#b57d00</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#000000</color>
+
+    <color name="primary100">#0036cc</color>
+    <color name="primary80">#1a5aff</color>
+    <color name="primary60">#4778FF</color>
+    <color name="primary40">#7096FF</color>
+    <color name="primary20">#7096FF</color>
+    <color name="primary10">#7096FF</color>
+    <color name="primary00">#EBF0FF</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="greenDark">#409721</color>
+    <color name="green">#56C92C</color>
+    <color name="greenLight">#7BDA58</color>
+    <color name="redDark">#BF2722</color>
+    <color name="red">#DB3A34</color>
+    <color name="redLight">#E77874</color>
+    <color name="orangeDark">#A86224</color>
+    <color name="orange">#D47F35</color>
+    <color name="orangeLight">#DF9F68</color>
+
+    <color name="pros">#00BFB2</color>
+    <color name="pros01">#ADFFFA</color>
+    <color name="pros02">#0AFFEF</color>
+    <color name="pros03">#00BFB2</color>
+    <color name="pros04">#00A398</color>
+    <color name="pros05">#007A72</color>
+    <color name="cons">#B48291</color>
+    <color name="con01">#E8D9DD</color>
+    <color name="con02">#D1B3BC</color>
+    <color name="con03">#B48291</color>
+    <color name="con04">#A36678</color>
+    <color name="con05">#804D5C</color>
+
+</resources>

@@ -1,0 +1,105 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/secondaryColor</item>
+        <item name="android:navigationBarColor">@color/primaryColor</item>
+        <item name="fontFamily">@font/google_sans</item>
+        <item name="tabStyle">@style/Widget.App.TabLayout</item>
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/splash_screen_background</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CustomEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:padding">@dimen/twenty_four_dips</item>
+    </style>
+
+    <style name="Widget.App.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.TabLayout</item>
+        <item name="tabTextAppearance">@style/TextAppearance.App.Button</item>
+    </style>
+
+    <style name="ThemeOverlay.App.TabLayout" parent="">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorSurface">@color/primaryColor</item>
+        <item name="colorOnSurface">@color/primary00</item>
+        <item name="textAllCaps">false</item>
+
+        <item name="tabIndicator">@drawable/bg_tab_background</item>
+        <item name="tabIndicatorHeight">3dp</item>
+    </style>
+
+    <style name="TextAppearance.App.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/google_sans_bold</item>
+        <item name="android:fontFamily">@font/google_sans_bold</item>
+    </style>
+
+    <style name="CustomTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <item name="boxBackgroundColor">@color/primary60</item>
+        <item name="boxStrokeColor">@color/primary60</item>
+
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@color/primary00</item>
+        <item name="iconTint">@color/primary00</item>
+
+        <item name="boxStrokeWidth">@dimen/zero_dips</item>
+        <item name="boxStrokeWidthFocused">@dimen/zero_dips</item>
+
+        <item name="android:bottomLeftRadius">@dimen/ten_dips</item>
+        <item name="android:topRightRadius">@dimen/ten_dips</item>
+        <item name="android:topLeftRadius">@dimen/ten_dips</item>
+        <item name="android:bottomRightRadius">@dimen/ten_dips</item>
+    </style>
+
+    <style name="DialogStyle" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/secondaryColor</item>
+    </style>
+
+    <declare-styleable name="Paredview">
+        <!--文本字体大小-->
+        <attr name="label_text_size" format="dimension|float" />
+        <!-- 左边进度颜色-->
+        <attr name="sussic_color" format="color" />
+        <!-- 右边进度颜色-->
+        <attr name="no_sussic_color" format="color" />
+        <!-- 进度条高度 -->
+        <attr name="pared_height" format="dimension" />
+        <!-- 文本颜色-->
+        <attr name="label_text_color" format="color" />
+        <!--最大值-->
+        <attr name="max_count" format="integer" />
+        <!--完成度-->
+        <attr name="sussic_count" format="integer" />
+        <!--底部文字-->
+        <attr name="bottom_text" format="string" />
+        <!--顶部显示单位-->
+        <attr name="unit_text" format="string" />
+        <!--完成度文本颜色-->
+        <attr name="sussic_label_text_color" format="color" />
+
+    </declare-styleable>
+</resources>

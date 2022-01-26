@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Rafiki</string>
+    <string name="dummy_text">This is the dummy text</string>
+    <string name="retry">retry</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="archived">Archived</string>
+    <string name="haiku">Ask a question and you will feel shame for a moment. Not asking and not knowing means you will feel shame for your whole life.</string>
+    <string name="haiku_text">japanese proverb</string>
+</resources>

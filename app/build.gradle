@@ -1,0 +1,133 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.firebase.firebase-perf'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "30.0.0"
+
+    defaultConfig {
+        applicationId "com.mambo.rafiki"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 3
+        versionName "v1.0.0-Anostomus"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+def githubProperties = new Properties()
+githubProperties.load(new FileInputStream(rootProject.file("github.properties")))
+repositories {
+    maven {
+        name = "GitHubPackages"
+
+        url = uri("https://maven.pkg.github.com/Cuberto/flashy-tabbar-android")
+        credentials {
+            /** Create github.properties in root project folder file with
+             ** gpr.usr=GITHUB_USER_ID & gpr.key=PERSONAL_ACCESS_TOKEN
+             ** Or set env variable GPR_USER & GPR_API_KEY if not adding a properties file**/
+            username = githubProperties['gpr.usr'] ?: System.getenv("GPR_USER")
+            password = githubProperties['gpr.key'] ?: System.getenv("GPR_API_KEY")
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    def nav_version = "2.3.1"
+    def lottieVersion = "3.4.1"
+    def paging_version = "2.1.2"
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+
+    //google
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+
+    //firebase
+    implementation 'com.google.firebase:firebase-analytics:17.6.0'
+    implementation 'com.google.firebase:firebase-firestore:21.7.1'
+    implementation 'com.google.firebase:firebase-config:19.2.0'
+    implementation 'com.google.firebase:firebase-auth:19.4.0'
+    implementation 'com.google.firebase:firebase-crashlytics:17.2.2'
+    implementation 'com.google.firebase:firebase-perf:19.0.9'
+    implementation 'com.google.firebase:firebase-messaging:21.0.0'
+    implementation 'com.google.firebase:firebase-functions:19.1.0'
+    implementation 'com.google.firebase:firebase-inappmessaging-display:19.1.2'
+    implementation 'com.firebaseui:firebase-ui-firestore:7.1.1'
+
+    implementation 'com.google.firebase:firebase-appindexing:19.1.0'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //Material Design
+    implementation 'com.google.android.material:material:1.3.0-alpha03'
+
+    //paging
+    implementation "androidx.paging:paging-runtime:$paging_version"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    // Testing Navigation
+    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+
+    // Room components
+    implementation "androidx.room:room-runtime:$rootProject.roomVersion"
+    annotationProcessor "androidx.room:room-compiler:$rootProject.roomVersion"
+    androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
+
+    // Lifecycle components
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.archLifecycleVersion"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$rootProject.archLifecycleVersion"
+
+    // UI
+    implementation "com.google.android.material:material:$rootProject.materialVersion"
+
+    // Testing
+    androidTestImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"
+
+    // debugImplementation because LeakCanary should only run in debug builds.
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.5'
+
+    // others
+    implementation 'com.jcodecraeer:xrecyclerview:1.6.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+    implementation 'pub.devrel:easypermissions:3.0.0'
+    implementation 'com.cuberto.flashytabbarandroid:flashytabbarandroid:1.0.0'
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    implementation 'com.kyleduo.switchbutton:library:2.0.2'
+    implementation 'com.r0adkll:slidableactivity:2.1.0'
+    implementation 'com.getbase:floatingactionbutton:1.10.1'
+    implementation 'com.github.channguyen:rsv:1.0.1'
+    implementation 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:3.0.0-RC2'
+    implementation 'com.camerash:toggleedittextview:0.1.1'
+    implementation "com.yuyakaido.android:card-stack-view:2.3.4"
+    implementation 'org.ocpsoft.prettytime:prettytime:4.0.4.Final'
+}

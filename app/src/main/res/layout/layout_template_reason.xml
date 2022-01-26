@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="isVisible"
+            type="boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/layout_reason_dataless"
+            layout="@layout/layout_reason_dataless"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:visibleUnless="@{isVisible}"
+            tools:layout_editor_absoluteX="189dp"
+            tools:layout_editor_absoluteY="111dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            app:invisibleUnless="@{isVisible}"
+            android:id="@+id/rv_template_reason"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="158dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
