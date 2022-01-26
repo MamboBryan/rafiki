@@ -5,6 +5,21 @@
 An app that weighs the pros and cons of a decision to help you make the best decision.
 <br>
 
+## Demo
+<p>
+<img src="images/landing.png" width="150" vspace="20" hspace="2" alt="Landing Page" />
+<img src="images/decisions.png" width="150" vspace="20" hspace="2" alt="Users Decisions" />
+<img src="images/home.png" width="150" vspace="20" hspace="2" alt="Personal Decisions" />
+<img src="images/settings.png" width="150" vspace="20" hspace="2" alt="Personal Decisions" />
+</p>
+<p>
+<img src="images/overview.png" width="150" vspace="20" hspace="2" alt="Personal Decisions" />
+<img src="images/pro.png" width="150" vspace="20" hspace="2" alt="Personal Decisions" />
+<img src="images/con.png" width="150" vspace="20" hspace="2" alt="Personal Decisions" />
+<img src="images/comments.png" width="150" vspace="20" hspace="2" alt="Personal Decisions" />
+</p>
+
+
 ## Features
 - create, read, update, delete, publish, unpublish and archive a decision
 - create, read, update and delete a pro/con
