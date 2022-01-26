@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="isFeedbackRequired"
+            type="boolean" />
+
+        <variable
+            name="isLoading"
+            type="boolean" />
+
+        <variable
+            name="isDataReady"
+            type="boolean" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/include_template_data"
+            layout="@layout/layout_template_card_stack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:goneUnless="@{isDataReady}" />
+
+        <include
+            android:id="@+id/include_template_loading"
+            layout="@layout/layout_template_recycler_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:goneUnless="@{isLoading}" />
+
+        <include
+            android:id="@+id/include_template_feedback"
+            layout="@layout/layout_template_recycler_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:goneUnless="@{isFeedbackRequired}" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

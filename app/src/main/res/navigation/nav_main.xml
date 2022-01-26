@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mambo.rafiki.ui.views.fragments.HomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_homeFragment_to_mainFragment"
+            app:destination="@id/archivedFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_decisionFragment"
+            app:destination="@id/decisionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_archivedFragment"
+            app:destination="@id/archivedFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_authenticationFragment"
+            app:destination="@id/authenticationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_setupFragment"
+            app:destination="@id/setupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/discoverFragment"
+        android:name="com.mambo.rafiki.ui.views.fragments.DiscoverFragment"
+        android:label="Discover"
+        tools:layout="@layout/fragment_discover" />
+    <fragment
+        android:id="@+id/decisionsFragment"
+        android:name="com.mambo.rafiki.ui.views.fragments.DecisionsFragment"
+        android:label="Decisions"
+        tools:layout="@layout/fragment_decisions" />
+    <fragment
+        android:id="@+id/archivedFragment"
+        android:name="com.mambo.rafiki.ui.views.fragments.ArchivedFragment"
+        android:label="Archived"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_archivedFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_archivedFragment_to_decisionFragment"
+            app:destination="@id/decisionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.mambo.rafiki.ui.views.fragments.SettingsFragment"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_generalSettingsFragment"
+            app:destination="@id/generalSettingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_feedbackFragment"
+            app:destination="@id/feedbackFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_authenticationFragment"
+            app:destination="@id/authenticationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/generalSettingsFragment"
+        android:name="com.mambo.rafiki.ui.views.fragments.GeneralSettingsFragment"
+        android:label="fragment_general_settings"
+        tools:layout="@layout/fragment_general_settings" />
+    <fragment
+        android:id="@+id/decisionFragment"
+        android:name="com.mambo.rafiki.ui.views.fragments.DecisionFragment"
+        tools:layout="@layout/fragment_decision" >
+        <action
+            android:id="@+id/action_decisionFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.mambo.rafiki.ui.views.fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.mambo.rafiki.ui.views.fragments.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="com.mambo.rafiki.ui.views.fragments.FeedbackFragment"
+        tools:layout="@layout/fragment_feedback" />
+    <fragment
+        android:id="@+id/authenticationFragment"
+        android:name="com.mambo.rafiki.ui.views.fragments.AuthenticationFragment"
+        android:label="fragment_authentication"
+        tools:layout="@layout/fragment_authentication" >
+        <action
+            android:id="@+id/action_authenticationFragment_to_setupFragment"
+            app:destination="@id/setupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setupFragment"
+        android:name="com.mambo.rafiki.ui.views.fragments.SetupFragment"
+        android:label="fragment_setup"
+        tools:layout="@layout/fragment_setup" >
+        <action
+            android:id="@+id/action_setupFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>

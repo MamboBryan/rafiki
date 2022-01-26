@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_item_archive"
+        android:title="archive" />
+
+    <item
+        android:id="@+id/menu_item_unarchive"
+        android:title="unarchive" />
+
+    <item
+        android:id="@+id/menu_item_public"
+        android:title="disclose" />
+
+    <item
+        android:id="@+id/menu_item_private"
+        android:title="conceal" />
+
+    <item
+        android:id="@+id/menu_item_delete"
+        android:title="delete" />
+
+</menu>

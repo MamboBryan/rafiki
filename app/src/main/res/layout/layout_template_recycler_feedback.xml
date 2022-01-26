@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="animationId"
+            type="int" />
+
+        <variable
+            name="feedbackText"
+            type="String" />
+
+        <variable
+            name="isButtonVisible"
+            type="boolean" />
+
+        <variable
+            name="OnRetryListener"
+            type="com.mambo.rafiki.utils.RecyclerviewUtils.OnRetryListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lav_template_recycler_feedback"
+            setAnimationFromDrawable="@{animationId}"
+            android:layout_width="@dimen/lottie_animation_width"
+            android:layout_height="@dimen/lottie_animation_height"
+            app:layout_constraintBottom_toTopOf="@+id/guideline26"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline26"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_repeatCount="1" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintEnd_toEndOf="@+id/lav_template_recycler_feedback"
+            app:layout_constraintStart_toStartOf="@+id/lav_template_recycler_feedback"
+            app:layout_constraintTop_toBottomOf="@+id/lav_template_recycler_feedback" />
+
+        <TextView
+            android:id="@+id/tv_template_recycler_info_text"
+            android:layout_width="@dimen/text_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{feedbackText}"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/textView21"
+            app:layout_constraintStart_toStartOf="@+id/textView21"
+            app:layout_constraintTop_toBottomOf="@+id/textView21"
+            tool:text="@string/dummy_text" />
+
+        <Button
+            android:id="@+id/btn_template_recycler"
+            android:layout_width="@dimen/button_long_width"
+            android:layout_height="@dimen/button_long_height"
+            android:layout_marginTop="32dp"
+            android:onClick="@{()->OnRetryListener.onRetryClicked()}"
+            android:text="@string/retry"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            app:invisibleUnless="@{isButtonVisible}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_template_recycler_info_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
